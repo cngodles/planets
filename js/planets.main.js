@@ -24,7 +24,7 @@ var planet = {
 		//Grab diameter of focus planet.
 		for(i=0; this.data.length > i; i++){
 			if(this.data[i].name === this.targetbody){
-				this.focusvalue = this.data[i].dia;
+				this.focusvalue = this.data[i].v;
 				break;
 			}
 		}
