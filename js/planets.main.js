@@ -1,7 +1,8 @@
 var planet = {
 	loaded:false,
   	focalsize:1,
-  	targetbody:'Sol',
+  	focusvalue:1,
+	targetbody:'Sol',
   	data:[
 		{name:'Sol', dia:1392000},
 		{name:'Mercury', dia:4879},
@@ -16,29 +17,25 @@ var planet = {
 		{name:'Pluto', dia:2370}
   	],
   	setMeasurements:function(){
-		console.log("Setting Measurements.");
-		var psize = [];
 		var i = 0;
 		var returndata = [];
-		psize.focusval = 1;
 		
 		//Grab diameter of focus planet.
 		for(i=0; this.data.length > i; i++){
 			if(this.data[i].name === this.targetbody){
-				psize.focusval = this.data[i].dia;
+				this.focusvalue = this.data[i].dia;
 				break;
 			}
 		}
-
+		//Create HTML for output.
 		for(i=0; this.data.length > i; i++){
-			console.log(this.data[i].dia / psize.focusval);
-			var finaldia = (this.focalsize * (this.data[i].dia / psize.focusval)).toFixed(2);
-			//console.log(this.data[i].name+' - '+this.data[i].dia+' - '+finaldia);
+			var finaldia = (this.focalsize * (this.data[i].dia / this.focusvalue)).toFixed(2);
 			returndata.push('<li class="planetdata" rel="'+this.data[i].name+'">'+this.data[i].name+': <span>'+finaldia+'</span> cm</li>');
 		}
 		$("#return_dia").html(returndata.join("\n"));
 	},
 	init:function(){
+		//Initialize.
 		var i = 0;
 		var returndata = [];
 		for(i=0; this.data.length > i; i++){
