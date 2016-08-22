@@ -12,30 +12,18 @@ $(document)
 	return false;
 })
 .on("keypress change keyup", "#sunsize", function(){
-planet.focalsize = $(this).val();
-planet.setMeasurements();
-/*
-var psize = [];
-psize[1] = sunsize * 0.00350502;
-psize[2] = sunsize * 0.00869540;
-psize[3] = sunsize * 0.00916379;
-psize[31] = sunsize * 0.00249640;
-psize[4] = sunsize * 0.00487931;
-psize[5] = sunsize * 0.10271839;
-psize[6] = sunsize * 0.08659195;
-psize[7] = sunsize * 1;
-psize[8] = sunsize * 1;
-*/
-  /*
-  $("#planet_1 span").text(psize[1]);
-  $("#planet_2 span").text(psize[2]);
-  $("#planet_3 span").text(psize[3]);
-  $("#planet_4 span").text(psize[4]);
-  $("#planet_5 span").text(psize[5]);
-  $("#planet_6 span").text(psize[6]);
-  $("#planet_7 span").text(psize[7]);
-  $("#planet_8 span").text(psize[8]);
-  */
+  planet.focalsize = $(this).val();
+  planet.setMeasurements();
+})
+.on("click", "h2 span", function(){
+  if($(this).text() == "Sun?"){
+    $(this).text("Earth?");
+    planet.targetbody = 'earth';
+  } else {
+    $(this).text("Sun?");
+    planet.targetbody = 'sol';
+  }
+  $("#sunsize").trigger("change");
 })
 ;
 
