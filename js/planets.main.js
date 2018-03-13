@@ -1,10 +1,10 @@
 //Targetbody diameters of items and orbits in KM.
 var planet = {
-	loaded:false,
+  loaded:false,
   focalsize:1,
   focusvalue:1,
-	accuracy:2,
-	targetbody:'Sol',
+  accuracy:2,
+  targetbody:'Sol',
   data:[
     {name:'Sol', 		v:1392000},
     {name:'Mercury', 	v:4879},
@@ -43,8 +43,8 @@ var planet = {
     {name:'Charon Orbit', 	v:39192}
   ],
   setMeasurements:function(){
-		var i = 0;
-		var returndata = [];
+    var i = 0;
+    var returndata = [];
 
     //Grab diameter of focus planet.
     for(i=0; this.data.length > i; i++){
@@ -53,6 +53,7 @@ var planet = {
         break;
       }
     }
+    
 		//Create HTML for output.
 		for(i=0; this.data.length > i; i++){
 			var finaldia = (this.focalsize * (this.data[i].v / this.focusvalue)).toFixed(this.accuracy);
