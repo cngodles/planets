@@ -6,6 +6,8 @@ input 				{ border-radius: 0; }
 .inner 				{ margin: 0 auto; width: 1220px; z-index: 1; background-color:#fff; }
 .clear0 			{ font-size:0px; line-height:0px; width:0px; height:0px; clear:both; display:block; }
 
+.stage      { padding: 30px 0; }
+
 header				{ min-height:100px; font-size:24px; }
 header a			{ font-size:14px; }
 header .inner		{ height:auto; padding: 10px 0; background-color:#fff; }
@@ -29,7 +31,7 @@ input			{ width:80px; border:0; padding:10px 20px; background-color:#fff; font-s
 ul li			{ font-size:18px; line-height:24px; font-weight:bold; }
 ul li span		{ color:#17861D; font-weight:normal; }
 
-footer			{ padding:100px 0 20px 0; }
+footer			{ padding:60px 0 20px 0; }
 
 #mobile_menu 	{ display:block; position:absolute; top:0; right:0; }
 #responder 		{ left: -5000px; position: absolute; z-index: 1; }

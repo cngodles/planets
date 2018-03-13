@@ -54,12 +54,12 @@ var planet = {
       }
     }
     
-		//Create HTML for output.
-		for(i=0; this.data.length > i; i++){
-			var finaldia = (this.focalsize * (this.data[i].v / this.focusvalue)).toFixed(this.accuracy);
-			returndata.push('<li class="planetdata" rel="'+this.data[i].name+'">'+this.data[i].name+': <span>'+finaldia+'</span> cm</li>');
-		}
-		$("#return_dia").html(returndata.join("\n"));
+    //Create HTML for output.
+    for(i=0; this.data.length > i; i++){
+      var finaldia = (this.focalsize * (this.data[i].v / this.focusvalue)).toFixed(this.accuracy);
+      returndata.push('<li class="planetdata" rel="'+this.data[i].name+'">'+this.data[i].name+': <span>'+finaldia+'</span> cm</li>');
+    }
+    $("#return_dia").html(returndata.join("\n"));
 	},
 	init:function(){
 		//Initialize.

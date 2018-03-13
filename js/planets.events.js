@@ -2,7 +2,7 @@ $(document)
 .ready(function(){
   planet.init();
 })
-.on("keyup", "#sunsize", function(){
+.on("keyup change", "#sunsize", function(){
   planet.focalsize = $(this).val();
   planet.setMeasurements();
 })

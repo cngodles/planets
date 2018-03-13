@@ -24,19 +24,20 @@
       </div>
     </header>
     <main>
-      <div class="inner">
-        <a href="#" class="action_choosebase">Choose planet/star</a>
-        <div class="basechoices"></div>
-        <div id="input_step2">
-          <h2 class="choicename">Enter size for Sol</h2>
-          <div class="inputline">
-            <input type="number" min="0" inputmode="numeric" pattern="[0-9]*" id="sunsize" onkeypress="return event.charCode >= 48 && event.charCode <= 57"> cm
+      <section class="stage">
+        <div class="inner">
+          <a href="#" class="action_choosebase">Choose planet/star</a>
+          <div class="basechoices"></div>
+          <div id="input_step2">
+            <h2 class="choicename">Enter size for Sol</h2>
+            <div class="inputline">
+              <input type="number" min="0" inputmode="numeric" pattern="[0-9]*" id="sunsize" onkeypress="return event.charCode >= 48 && event.charCode <= 57"> cm
+            </div>
+            <ul id="return_dia">
+            </ul>
           </div>
-          <ul id="return_dia">
-          </ul>
         </div>
-      </div>
-      <div class="spacer30 clearbox"></div>
+      </section>
     </main>
     <footer>
       <div class="inner">
