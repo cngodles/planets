@@ -2,10 +2,9 @@
 <html lang="en-US">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes">
   <title>Planetary Diameter Converter</title>
-  <meta name="description" content="A quick tool for finding relative planetary diameters if one size is known or used.">
+  <meta name="description" content="A tool for finding relative planetary diameters if one size is known or used in centimeters.">
   <link rel="shortcut icon" href="../favicon.ico">
   <link rel="icon" href="../favicon.ico">
   <link rel="stylesheet" type="text/css" href="css/planets.base.css">
@@ -20,6 +19,8 @@
       <div class="inner">
         <div class="pad">
           <h1>Planetary Diameter Converter</h1>
+          <p>Select an object below. Enter a size in centimeters (cm) for that object, and we will show you what size other Solar 
+            System objects would be in comparison. This tool is useful for at-scale projects to show relative sizes or distances.</p>
         </div>
       </div>
     </header>
@@ -31,26 +32,24 @@
           <div id="input_step2">
             <h2 class="choicename">Enter size for Sol</h2>
             <div class="inputline">
-              <input type="number" min="0" inputmode="numeric" pattern="[0-9]*" id="sunsize" onkeypress="return event.charCode >= 48 && event.charCode <= 57"> cm
+              <input type="number" min="0" inputmode="numeric" id="sunsize" onkeypress="return event.charCode >= 48 && event.charCode <= 57"> cm
             </div>
-            <ul id="return_dia">
-            </ul>
+            <ul id="return_dia"></ul>
           </div>
         </div>
       </section>
     </main>
     <footer>
       <div class="inner">
-        <p>Copyright &copy;2024 Clinton N. Godlesky, All Rights Reserved.</p>
-        <div class="spacer20 clearbox"></div>
+        <p>Copyright &copy; 2024 Clinton N. Godlesky, All Rights Reserved.</p>
       </div>
     </footer>
   </div>
 </div>
 <div id="responder"></div>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>if (!window.jQuery) { document.write('<script src="/js/jquery-3.7.1.min.js"><\/script>'); }</script>
-<script type="text/javascript" src="js/planets.main.js"></script>
-<script type="text/javascript" src="js/planets.events.js"></script>
+<script src="js/planets.main.js"></script>
+<script src="js/planets.events.js"></script>
 </body>
 </html>
