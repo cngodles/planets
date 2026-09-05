@@ -3,14 +3,35 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes">
-  <title>Planetary Diameter Converter</title>
-  <meta name="description" content="A tool for finding relative planetary diameters if one size is known or used in centimeters.">
+  <title>Planetary Diameter &amp; Scale Model Calculator | Solar System Size Comparison Tool</title>
+  <meta name="description" content="Free scale calculator for the solar system. Pick any planet, moon, or orbit as your reference size and instantly see accurate scaled sizes for every other planet, moon, and orbital distance. Built for scale models, science fair projects, and classroom demos.">
+  <link rel="canonical" href="https://cngodles.github.io/planets/index.html">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Planetary Diameter &amp; Scale Model Calculator">
+  <meta property="og:description" content="Pick a planet, moon, or orbit as your reference size and instantly see accurate scaled sizes for every other object in the solar system.">
+  <meta property="og:url" content="https://cngodles.github.io/planets/index.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Planetary Diameter &amp; Scale Model Calculator">
+  <meta name="twitter:description" content="Pick a planet, moon, or orbit as your reference size and instantly see accurate scaled sizes for every other object in the solar system.">
   <link rel="shortcut icon" href="../favicon.ico">
   <link rel="icon" href="../favicon.ico">
   <link rel="stylesheet" type="text/css" href="css/planets.base.css">
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Planetary Diameter & Scale Model Calculator",
+    "url": "https://cngodles.github.io/planets/index.html",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "description": "Enter a real-world size for any planet, moon, or orbit and get accurately scaled sizes for every other object in the solar system, useful for scale models, science projects, and classroom demonstrations."
+  }
+  </script>
 </head>
 <body>
 <div id="siteframe">
@@ -18,9 +39,11 @@
     <header>
       <div class="inner">
         <div class="pad">
-          <h1>Planetary Diameter Converter</h1>
-          <p>Select an object below. Enter a size in centimeters (cm) for that object, and we will show you what size other Solar 
-            System objects would be in comparison. This tool is useful for at-scale projects to show relative sizes or distances.</p>
+          <h1>Planetary Diameter &amp; Scale Model Calculator</h1>
+          <p>Building a scale model of the solar system, planning a classroom demo, or just curious how big Jupiter would
+            be if Earth were the size of a marble? Pick any planet, moon, or orbit below, enter its size in centimeters,
+            and this tool instantly scales every other planet, moon, and orbital distance in the solar system to match &mdash;
+            using accurate real-world diameters and orbital distances.</p>
         </div>
       </div>
     </header>
@@ -36,6 +59,31 @@
             </div>
             <ul id="return_dia"></ul>
           </div>
+        </div>
+      </section>
+      <section class="stage">
+        <div class="inner">
+          <h2>How it works</h2>
+          <p>Choose any object &mdash; a planet, a moon, or the orbit of one around another &mdash; as your reference size.
+            Enter that object's size in centimeters and every other object in the list rescales proportionally, using
+            each body's real equatorial diameter (or, for orbits, its real orbital distance). The math is a simple ratio:
+            whatever scale your reference object is at, every other object is shown at that same scale.</p>
+
+          <h2>Why use a scale calculator</h2>
+          <p>It's easy to read that Jupiter is about 11 times wider than Earth, but much harder to picture. Scaling
+            everything to an object you can hold &mdash; a marble, a basketball, a classroom globe &mdash; makes the size
+            differences between planets, moons, and orbital distances immediately intuitive. This tool is handy for:</p>
+          <ul>
+            <li>Building a to-scale model of the solar system for a science fair or classroom</li>
+            <li>Sizing 3D-printed or hand-made planet models consistently</li>
+            <li>Teaching relative planetary and lunar sizes, or how far apart orbits really are</li>
+            <li>Satisfying curiosity about just how small Earth is next to the Sun or the gas giants</li>
+          </ul>
+
+          <h2>What's included</h2>
+          <p>Covers the Sun, all eight planets, Pluto, and their major moons (including Earth's Moon, the Galilean moons
+            of Jupiter, Saturn's Titan, the large moons of Uranus and Neptune, and Pluto's moon Charon), plus the orbital
+            distances of each planet and several major moons.</p>
         </div>
       </section>
     </main>
