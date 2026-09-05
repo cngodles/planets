@@ -15,12 +15,38 @@ header .pad		{ padding:0px; }
 header h1		{ font-size:24px; line-height:1.33; color:#333; }
 header p		{ font-size:18px; line-height:1.33; color:#333; }
 
-.action_choosebase	{ font-size:16px; color:#fff; text-decoration:none; display:block; width:200px; text-align:center; background-color:#0c70ac; border-radius:3px; height:40px; line-height:40px; font-weight:700; }
+.action_choosebase	{ font-size:16px; color:#fff; text-decoration:none; display:block; width:200px; text-align:center; background-color:#0c70ac; border-radius:3px; height:40px; line-height:40px; font-weight:700; border:0; margin:0; font-family:inherit; cursor:pointer; }
 
-.basechoices		{ height:0; overflow:hidden; background-color:#fff; padding:0px; width:200px; }
+.basechoices		{ height:0; overflow:hidden; background-color:#fff; padding:0px; width:260px; }
 .basechoices.open	{ height:auto; padding:10px 0; }
-.basechoices a		{ display:block; height:30px; font-size:16px; line-height:30px; text-decoration:none; padding:0 20px; color:#333; font-weight:700; }
-.basechoices a:hover	{ background-color:#000; color:#fff; }
+.basechoices button.choice	{ display:block; width:100%; min-height:30px; font-size:16px; line-height:30px; text-align:left; text-decoration:none; padding:0 20px; color:#333; font-weight:700; background:none; border:0; margin:0; font-family:inherit; cursor:pointer; }
+.basechoices button.choice:hover	{ background-color:#000; color:#fff; }
+.basechoices button.choice:focus, .basechoices button.choice-toggle:focus	{ background-color:#000; color:#fff; outline:3px solid #0c70ac; outline-offset:-3px; }
+.basechoices button.choice:active, .basechoices button.choice-toggle:active	{ background-color:#0c70ac; color:#fff; }
+
+.basechoices ul.choicelist		{ list-style:none; margin:0; padding:0; }
+.basechoices li.choiceitem		{ position:relative; }
+.basechoices li.choice-group > button.choice	{ padding-left:40px; }
+.basechoices button.choice-toggle	{ display:block; position:absolute; top:0; left:0; width:30px; height:30px; line-height:30px; text-align:center; font-size:22px; font-weight:700; padding:0; margin:0; background:none; border:0; font-family:inherit; color:#333; cursor:pointer; transition:transform .15s ease; }
+.basechoices li.choice-group.open > .choice-toggle	{ transform:rotate(90deg); }
+.basechoices li.choice-group > ul.choicelist	{ height:0; overflow:hidden; padding-left:40px; }
+.basechoices li.choice-group.open > ul.choicelist	{ height:auto; }
+
+.choicename_wiki	{ font-size:14px; font-weight:400; margin-left:8px; color:#0c70ac; }
+.choicename_wiki:focus	{ outline:3px solid #0c70ac; outline-offset:2px; }
+
+.sr-only	{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+
+.unit-toggle-group	{ display:inline-block; margin-left:12px; vertical-align:middle; }
+.unit-toggle	{ font-size:16px; font-weight:700; font-family:inherit; color:#333; background:#fff; border:1px solid #ccc; padding:8px 14px; cursor:pointer; line-height:1; vertical-align:middle; }
+.unit-toggle + .unit-toggle	{ border-left:0; }
+.unit-toggle:first-child	{ border-radius:3px 0 0 3px; }
+.unit-toggle:last-child	{ border-radius:0 3px 3px 0; }
+.unit-toggle:hover	{ background:#eee; }
+.unit-toggle:focus	{ outline:3px solid #0c70ac; outline-offset:-3px; position:relative; z-index:1; }
+.unit-toggle[aria-pressed="true"]	{ background:#0c70ac; color:#fff; border-color:#0c70ac; }
+
+.print-summary		{ display:none; }
 
 .planetdata.on		{ font-weight:700; }
 
@@ -31,6 +57,11 @@ input			{ width:80px; border:0; padding:10px 20px; background-color:#fff; font-s
 
 ul li			{ font-size:18px; line-height:24px; font-weight:bold; }
 ul li span		{ color:#17861D; font-weight:normal; }
+
+#return_dia		{ list-style:none; margin:0; padding:0; }
+.planetdata-major	{ font-size:20px; font-weight:800; margin-top:10px; }
+.planetdata-major:first-child	{ margin-top:0; }
+.planetdata-child	{ font-size:15px; font-weight:400; padding-left:28px; color:#555; }
 
 footer			{ padding:60px 0 20px 0; }
 
@@ -54,4 +85,23 @@ footer			{ padding:60px 0 20px 0; }
 	#wrapper { min-width: 990px; }
 	.inner { width: 960px; }
 	#responder { z-index: 5; }
+}
+
+@media print {
+	body		{ background:#fff; }
+	#siteframe	{ background:#fff; min-width:0; }
+	#wrapper	{ background:#fff; min-width:0; min-height:0; box-shadow:none; }
+	.inner		{ width:auto; margin:0; }
+
+	.action_choosebase, .basechoices, footer, #responder, .explainer, .inputline	{ display:none !important; }
+
+	header h1, header p, .choicename	{ display:none; }
+	header		{ min-height:0; }
+
+	.print-summary	{ display:block; font-size:22px; font-weight:700; line-height:1.33; color:#333; margin:0 0 20px 0; }
+
+	.choicename_wiki[href]:after	{ content:" (" attr(href) ")"; font-size:11px; font-weight:400; color:#333; }
+
+	#return_dia	{ column-count:2; column-gap:30px; }
+	.planetdata	{ page-break-inside:avoid; break-inside:avoid; }
 }

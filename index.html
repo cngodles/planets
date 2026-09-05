@@ -50,18 +50,23 @@
     <main>
       <section class="stage">
         <div class="inner">
-          <a href="#" class="action_choosebase">Choose planet/star</a>
-          <div class="basechoices"></div>
+          <button type="button" class="action_choosebase" aria-haspopup="true" aria-expanded="false" aria-controls="basechoices_menu">Choose planet/star</button>
+          <div class="basechoices" id="basechoices_menu"></div>
           <div id="input_step2">
-            <h2 class="choicename">Enter size for Sol</h2>
+            <h2 class="choicename">Enter size for <span class="choicename_name">Sol</span> <a href="#" class="choicename_wiki" target="_blank" rel="noopener noreferrer" hidden>Wiki<span class="sr-only"> (opens in new tab)</span></a></h2>
+            <p class="print-summary">If <span class="print-summary-body">the Sun</span> were <span class="print-summary-size">1</span> <span class="print-summary-unit">cm</span>, the following would be:</p>
             <div class="inputline">
-              <input type="number" min="0" inputmode="numeric" id="sunsize" onkeypress="return event.charCode >= 48 && event.charCode <= 57"> cm
+              <input type="number" min="0" inputmode="numeric" id="sunsize" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+              <span class="unit-toggle-group" role="group" aria-label="Measurement unit">
+                <button type="button" class="unit-toggle" data-unit="cm" aria-pressed="true">cm</button>
+                <button type="button" class="unit-toggle" data-unit="in" aria-pressed="false">in</button>
+              </span>
             </div>
             <ul id="return_dia"></ul>
           </div>
         </div>
       </section>
-      <section class="stage">
+      <section class="stage explainer">
         <div class="inner">
           <h2>How it works</h2>
           <p>Choose any object &mdash; a planet, a moon, or the orbit of one around another &mdash; as your reference size.
